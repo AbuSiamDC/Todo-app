@@ -1,6 +1,7 @@
 $bgcolor: #171d16;
 $textcolor: #daead7;
 $bordercolor: #0c100a;
+$elementcolor: #212d1e;
 
 
 .app{
@@ -36,7 +37,8 @@ $bordercolor: #0c100a;
             button{
                 padding: 10px;
                 border: none;
-                background-color: teal;
+                // background-color: teal;
+                background-color: $elementcolor;
                 cursor: pointer;
                 color: $textcolor;
                 font-size: 1.3em;
