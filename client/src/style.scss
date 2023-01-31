@@ -1,0 +1,57 @@
+$bgcolor: #171d16;
+$textcolor: #daead7;
+$bordercolor: #0c100a;
+
+
+.app{
+    .container{
+
+        .login{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            background-color: $bgcolor;
+            
+            h1{
+                font-size: 3.2em;
+                color: $textcolor;
+
+            }
+            form{
+                display: flex;
+                flex-direction: column;
+                padding: 20px;
+                background-color: white;
+                width: 350px;
+                gap: 20px;
+            }
+            input{
+                padding: 20px;
+                border: none;
+                border-bottom: 1px solid $bordercolor;
+                font-size: medium;
+            }
+            button{
+                padding: 10px;
+                border: none;
+                background-color: teal;
+                cursor: pointer;
+                color: $textcolor;
+                font-size: 1.3em;
+                margin-bottom: 10px;
+
+            }
+            p{
+                font-size: 1em;
+                color: red;
+                text-align: center;
+            }
+            span{
+                font-size: 1em;
+                text-align: center;
+            }
+        }
+    }
+}
