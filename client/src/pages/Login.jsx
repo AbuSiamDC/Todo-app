@@ -47,7 +47,7 @@ const Login = () => {
   }
   useEffect(()=>{  //THis finally fixed the problem... yeaaaa.... after 6 long hours -_- (so amr mote jeta hoice... jokhon first time login korete jai tokhon amader protected route dekhe te ekhn o amader authcontex e currentUser null to o abr amader login ai patahi dei...but ami login e useeffet dia rakci so jokhon o useffet e dekhe je amader curretUsers ekhn thik e set ace o amader home e navigate kore nia jai )
     console.log("Login inside use effect",currentUser);
-    if (currentUser) navigate("/")
+    if (currentUser) navigate("/") //and also ... if we are logged in then it wont also let us login again
 },[currentUser])
 
   // const handleSubmit = (event) =>{
