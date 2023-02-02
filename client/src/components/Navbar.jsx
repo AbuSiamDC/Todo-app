@@ -16,10 +16,10 @@ const Navbar = () => {
     <div className='navbar'>
       <div className='container'>
         {/* show user name and logout button */}
-        <span>{currentUser?.full_name}</span>
-        <span onClick={handleLogout}> Logout</span>
+        <span>Hello Agent: {currentUser?.full_name}</span>
+        <span className='logout' onClick={handleLogout}> Logout</span>
       </div>
-      Navbar
+      {/* Navbar */}
     </div>
 
   )

@@ -57,3 +57,20 @@ $elementcolor: #212d1e;
         }
     }
 }
+
+.navbar{
+    .container{
+        display: flex;
+        align-items: center;
+        justify-content: end;
+        gap: 10px;
+        padding: 10px;
+        // background-color: red;
+
+        .logout{
+            color: red;
+            // border-bottom: 1px solid;
+            cursor: pointer;
+        }
+    }
+}

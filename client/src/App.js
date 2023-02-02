@@ -12,6 +12,10 @@ import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import "./style.scss"
 
+// import { AuthContext } from '../context/authContext'
+
+// const { currentUser, logout } = useContext(AuthContext);
+
 const Layout = () => {
   return(
     <>
