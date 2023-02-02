@@ -38,7 +38,7 @@ const Login = () => {
       // }, 5000);
       console.log("before navigate inside login function",currentUser);
       navigate("/")
-      // navigate("/") //! This would run immediately and does not wait for the login to finish as we are using await... but i our App.js we are using a protected rount and we check if there is any current user (which is inside our authcontext) and if not then we redirect to login page not not let user go to any of the protected pages...but when we do login since we are tyring to go to the home page right away it gets blocked by out protected route check that is because out login process still has not finished which meand out current users are still not set insife authcontex and for this reason after we try to log in we are not immediatly redirected to the home page
+      // navigate("/") // This would run immediately and does not wait for the login to finish as we are using await... but i our App.js we are using a protected rount and we check if there is any current user (which is inside our authcontext) and if not then we redirect to login page not not let user go to any of the protected pages...but when we do login since we are tyring to go to the home page right away it gets blocked by out protected route check that is because out login process still has not finished which meand out current users are still not set insife authcontex and for this reason after we try to log in we are not immediatly redirected to the home page
 
     } catch (error) {
       setError(error.response.data)
