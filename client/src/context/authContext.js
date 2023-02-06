@@ -23,7 +23,9 @@ export const AuthContextProvider = ({children}) => {
     //     console.log("this auth test funciton ", currentUser);
     // }
     const login = async (inputs) => {
-        const res = await axios.post("/auth/login",inputs)
+        const res = await axios.post("/auth/login",inputs, {
+            withCredentials: true,
+        });
         // console.log("inside authContext before res.data", res.data);
         setCurrentUser(res.data)
         const l = localStorage.getItem("user")

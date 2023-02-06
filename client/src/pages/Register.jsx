@@ -3,6 +3,12 @@ import { useState } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
 import axios from "axios"
 
+// -------------------------------------------------------------Test
+import { useContext } from 'react'
+import { AuthContext } from '../context/authContext'
+import { useEffect } from 'react'
+// -------------------------------------------------------------Test
+
 const Register = () => {
   const [inputs,setInputs] = useState({
     full_name:"",
@@ -11,7 +17,16 @@ const Register = () => {
   })
   const [error, setError] = useState(null)
 
+  // -------------------------------------------------
+  const { currentUser } = useContext(AuthContext);
+  // -------------------------------------------------
+
   const navigate = useNavigate()
+
+  useEffect(()=>{  //THis finally fixed the problem... yeaaaa.... after 6 long hours -_- (so amr mote jeta hoice... jokhon first time login korete jai tokhon amader protected route dekhe te ekhn o amader authcontex e currentUser null to o abr amader login ai patahi dei...but ami login e useeffet dia rakci so jokhon o useffet e dekhe je amader curretUsers ekhn thik e set ace o amader home e navigate kore nia jai )
+    console.log("Login inside use effect",currentUser);
+    if (currentUser) navigate("/") //and also ... if we are logged in then it wont also let us login again
+})
 
   const handleSubmit = async (event) =>{
     event.preventDefault()

@@ -17,6 +17,8 @@ import "./style.scss"
 import { useContext } from "react";
 import { AuthContext } from './context/authContext'
 
+import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
+
 
 
 // const ProtectedRoutes = ({children}) => {
@@ -92,13 +94,17 @@ function App() {
     return children
   }
   
+  const queryClient = new QueryClient()
+  
   const Layout = () => {
     return(
-      <>
-        <Navbar />
-        <Outlet />
-        <Footer />
-      </>
+      <QueryClientProvider client={queryClient}>
+        <>
+          <Navbar />
+          <Outlet />
+          <Footer />
+        </>
+      </QueryClientProvider>
     );
   }
   
