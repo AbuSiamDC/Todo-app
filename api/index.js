@@ -10,10 +10,10 @@ const app = express()
 const port = 6900
 
 // middlewares
-app.use((req, res, next) => {
-    res.header("Access-Control-Allow-Credentials", true);
-    next();
-});
+// app.use((req, res, next) => {
+//     res.header("Access-Control-Allow-Credentials", true);
+//     next();
+// });
 app.use(express.json())
 app.use(cookieParser())
 app.use(
@@ -21,7 +21,7 @@ app.use(
         origin: "http://localhost:3000",
     })
 );
-
+ 
 
 app.use("/api/auth", authRouter)
 app.use("/api/users", usersRouter)

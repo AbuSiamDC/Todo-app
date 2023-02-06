@@ -1,6 +1,6 @@
 import React from 'react'
 // import { useQuery } from "@tanstack/react-query";
-import axios from "axios"
+// import axios from "axios"
 
 const Home = () => {
 
@@ -27,11 +27,11 @@ const Home = () => {
   //   const res = await axios.get("http://localhost:6900/api/todos")
   //   console.log(res.data)
   // }
- 
+  
   return (
     // <div>Home {data}</div>s
     <>
-      <div>Home</div>
+      <div>Home</div> 
       {/* <div>Response from the api : {test}</div>  */}
     </>
   )

@@ -17,7 +17,7 @@ import "./style.scss"
 import { useContext } from "react";
 import { AuthContext } from './context/authContext'
 
-import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
+// import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 
 
 
@@ -94,17 +94,17 @@ function App() {
     return children
   }
   
-  const queryClient = new QueryClient()
+  // const queryClient = new QueryClient()
   
   const Layout = () => {
     return(
-      <QueryClientProvider client={queryClient}>
+      // <QueryClientProvider client={queryClient}>
         <>
           <Navbar />
           <Outlet />
           <Footer />
         </>
-      </QueryClientProvider>
+      // {/* </QueryClientProvider> */}
     );
   }
   
